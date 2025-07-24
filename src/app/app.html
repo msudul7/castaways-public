@@ -1,0 +1,13 @@
+<app-header>
+</app-header>
+<section class="row h-100 d-flex justify-content-between main-content">
+  <div
+    *ngIf="sidebarService._show()"
+    class="col-auto sidebar h-100 pe-0"
+  >
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col ps-0 h-100 overflow-auto">
+    <router-outlet></router-outlet>
+  </div>
+</section>

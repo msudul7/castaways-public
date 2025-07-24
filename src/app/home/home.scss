@@ -1,0 +1,12 @@
+.banner-img {
+  width: 100%;
+  height: 500px;
+  background-image: url('/assets/images/web-ball.jpg');
+  background-size: cover;
+  background-position: bottom;
+}
+
+.banner-transparent {
+  max-width: 55rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}

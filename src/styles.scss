@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap-icons/font/bootstrap-icons";
+
+$primary: #152D53;
+$secondary: #485D84;
+$success: #A0EEC0;
+$info: #90D7FF;
+$warning: #FED234;
+$danger: #FE5F55;
+$light: #f8f9fa;
+$dark: #343a40;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  danger: $danger,
+  warning: $warning,
+  info: $info,
+  dark: $dark,
+  light: $light,
+);
+$custom-colors: (
+  primary-nav: $primary,
+  secondary-nav: $secondary,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-family-sans-serif: 'Roboto Condensed', "Noto Sans", Verdana, Arial, sans serif !default;
+$font-family-base: $font-family-sans-serif !default;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
