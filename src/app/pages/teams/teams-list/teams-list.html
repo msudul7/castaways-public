@@ -1,0 +1,14 @@
+<div
+  *ngFor="let team of filteredTeams"
+  class="team-button"
+>
+  <div class="card mb-3">
+    <div class="card-header">
+      <h3>{{ team?.castawaysName }}</h3>
+    </div>
+    <div class="card-body">
+      <p>League: {{team?.league}}</p>
+      <p>Division: {{ team?.division }}</p>
+      <p>Pool: {{ team?.pool }}</p>
+    </div>
+  </div>

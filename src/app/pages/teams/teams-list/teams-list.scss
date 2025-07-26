@@ -1,0 +1,7 @@
+.team-button {
+  &:hover {
+    background-color: var(--color-secondary);
+    filter:drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    cursor: pointer;
+  }
+}

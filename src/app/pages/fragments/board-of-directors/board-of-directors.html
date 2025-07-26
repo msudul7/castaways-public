@@ -1,0 +1,46 @@
+<section>
+  <div class="display-5 text-center my-5 d-flex justify-content-center align-items-center">
+    <h1>Board of Directors</h1>
+    <img
+      src="/assets/images/castaways_web_logo.png"
+      class="img-fluid mx-3"
+      alt="Castaways Logo"
+      width="50px"
+      height="auto"
+    >
+    <h2>2025-2026</h2>
+  </div>
+  <div class="row mx-5">
+    <div
+      class="col-md-4 col-xl-3 col-sm-6 text-end mb-4"
+      *ngFor="let director of directors"
+    >
+      <div class="row">
+        <a
+          href="mailto:{{director?.email}}"
+          class="text-decoration-none d-flex"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="col">
+            <img
+              *ngIf="director?.imageUrl"
+              [src]="director.imageUrl"
+              class="img-fluid mb-3 border border-1 rounded-5"
+              alt="{{director.name}}'s Photo"
+              width="200px"
+            >
+            <h4 class="my-0 mx-2">{{director?.name}}</h4>
+            <p class="my-0 mx-2">{{director?.title}}</p>
+          </div>
+          <div class="col-auto border-start p-0">
+            <button class="btn btn-outline-secondary border-0 py-0">
+              <i class="bi bi-envelope-fill fs-1"></i>
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

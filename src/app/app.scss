@@ -15,3 +15,8 @@ body {
 .main-content {
   height: calc(100vh - 188px) !important;
 }
+
+.page-content {
+  height: calc(100vh - 188px) !important;
+  overflow-y: auto;
+}

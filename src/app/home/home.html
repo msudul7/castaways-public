@@ -1,26 +1,9 @@
 <section class="banner-img d-flex justify-content-center">
-  <div class="h-100 d-flex flex-column justify-content-center align-items-center banner-transparent px-3">
-    <img
-      src="/assets/images/castaways_web_logo.png"
-      class="img-fluid mb-3"
-      alt="Castaways Logo"
-      width="300px"
-    >
-    <a
-      routerLink="/about"
-      class="text-center text-decoration-none"
-      style="cursor: pointer"
-    >
-      <h1
-        class="text-light mb-2"
-        style="opacity: 1"
-      >WELCOME TO CASTAWAYS FC</h1>
-      <p class="text-light"> The Castaways Football Club is a community-based soccer club that has been
-        serving the Victoria area for over 50 years. We are dedicated to promoting the
-        love of soccer and providing opportunities for adult players of all skill
-        levels to participate in the sport.</p>
-    </a>
-  </div>
+  <app-page-header
+    [includeLogo]="true"
+    title="Welcome to Castaways FC"
+    subtitle="The Castaways Football Club is a community-based soccer club that has been serving the Victoria area for over 50 years. We are dedicated to promoting the love of soccer and providing opportunities for adult players of all skill levels to participate in the sport."
+  ></app-page-header>
 </section>
 <section>
   <div class="container text-center my-4">
@@ -33,6 +16,7 @@
     >
   </div>
 </section>
+
 <!-- <button class="btn btn-primary">Primary Button</button>
 <button class="btn btn-secondary">Secondary Button</button>
 <button class="btn btn-info">info Button</button>

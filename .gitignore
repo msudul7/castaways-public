@@ -5,6 +5,8 @@
 /tmp
 /out-tsc
 /bazel-out
+/cdk.out*
+/aws
 
 # Node
 /node_modules
@@ -36,6 +38,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+/awscliv2.zip
 
 # System files
 .DS_Store

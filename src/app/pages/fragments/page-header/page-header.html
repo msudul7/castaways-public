@@ -1,0 +1,25 @@
+<section
+  class="banner-img d-flex justify-content-center"
+  style="background-image: url({{imageUrl}});"
+>
+  <div class="h-100 d-flex flex-column justify-content-center align-items-center banner-transparent px-3">
+    <img
+      *ngIf="includeLogo"
+      src="/assets/images/castaways_web_logo.png"
+      class="img-fluid mb-3"
+      alt="Castaways Logo"
+      width="300px"
+    >
+    <a
+      routerLink="/about"
+      class="text-center text-decoration-none"
+      style="cursor: pointer"
+    >
+      <h1
+        class="text-light mb-2 display-5"
+        style="opacity: 1"
+      >{{title | uppercase}}</h1>
+      <h6 class="text-light px-5">{{subtitle}}</h6>
+    </a>
+  </div>
+</section>

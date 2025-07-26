@@ -1,12 +1,16 @@
 {
   "name": "castaways-public",
   "version": "0.0.0",
+  "bin": {
+    "castawaysfc-site": "bin/castawaysfc-site.js"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "cdk": "cdk",
     "serve:ssr:castaways-public": "node dist/castaways-public/server/server.mjs"
   },
   "prettier": {
@@ -30,9 +34,12 @@
     "@angular/router": "^20.1.0",
     "@angular/ssr": "^20.1.1",
     "@popperjs/core": "^2.11.8",
+    "aws-cdk-lib": "^2.207.0",
     "bootstrap": "^5.3.7",
     "bootstrap-icons": "^1.13.1",
+    "constructs": "^10.0.0",
     "express": "^5.1.0",
+    "maplibre-gl": "^5.6.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -44,7 +51,9 @@
     "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^20.17.19",
+    "aws-cdk": "2.1022.0",
     "jasmine-core": "~5.8.0",
+    "jest": "^29.7.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",

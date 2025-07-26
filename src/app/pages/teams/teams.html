@@ -1,0 +1,23 @@
+<app-page-header
+  imageUrl="/assets/images/kick-beach.jpg"
+  title="Teams"
+  [includeLogo]="true"
+></app-page-header>
+<section class="container my-5">
+  <div class="row d-flex justify-content-center align-items-top">
+    <div class="col-md-6 text-center">
+      <h2 class="mb-3">CASTAWAYS FC WOMEN'S TEAMS</h2>
+      <app-teams-list
+        [filters]="womensFilters"
+        [sortBy]="'division'"
+      ></app-teams-list>
+    </div>
+    <div class="col-md-6 text-center">
+      <h2 class="mb-3">CASTAWAYS FC MEN'S TEAMS</h2>
+      <app-teams-list
+        [filters]="mensFilters"
+        [sortBy]="'division'"
+      ></app-teams-list>
+    </div>
+  </div>
+</section>

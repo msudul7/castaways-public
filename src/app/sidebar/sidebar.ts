@@ -16,19 +16,19 @@ export class SidebarComponent {
       title: 'About Us', path: '/about', icon: 'bi bi-info-circle'
     },
     {
-      title: 'Constitution and Bylaws', path: '/about', icon: 'bi bi-shield-shaded'
+      title: 'Constitution and Bylaws', path: '/bylaws', icon: 'bi bi-shield-shaded'
     },
     {
-      title: `What's Happening`, path: '/about', icon: 'bi bi-newspaper'
+      title: `What's Happening`, path: '/events', icon: 'bi bi-newspaper'
     },
     {
-      title: 'Teams', path: '/about', icon: 'bi bi-info-circle'
+      title: 'Teams', path: '/teams', icon: 'bi bi-info-circle'
     },
     {
-      title: 'Game Schedules', path: '/about', icon: 'bi bi-calendar-event'
+      title: 'Game Schedules', path: '/schedules/games', icon: 'bi bi-calendar-event'
     },
     {
-      title: 'Practice Schedules', path: '/about', icon: 'bi bi-calendar-week'
+      title: 'Practice Schedules', path: '/schedules/practices', icon: 'bi bi-calendar-week'
     },
   ];
 
