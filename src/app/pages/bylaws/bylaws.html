@@ -1,0 +1,33 @@
+<app-page-header
+  [title]="'Constitution & Bylaws'"
+  imageUrl="/assets/images/net.jpg"
+  [includeLogo]="true"
+></app-page-header>
+<section>
+  <div class="container my-5">
+    <div class="text-center display-5 mb-4">CONSTITUTION</div>
+    <h3 class="mb-4 text-center">CONSTITUTION OF CASTAWAYS FOOTBALL CLUB (THE "SOCIETY")</h3>
+    <h4 class="mb-4 text-center">The name of the Society is CASTAWAYS FOOTBALL CLUB</h4>
+    <div class="container">
+      <p>
+        The purposes of the Society are:
+      </p>
+      <ul type="a">
+        <li>to promote, foster and develop both men and women, in all boundaries, in the game of Soccer, and</li>
+        <li>to encourage excellent communication and participation to cultivate winning and positive teams and players.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<hr>
+<section>
+  <div class="container my-5">
+    <div class="text-center display-5 mb-4">BYLAWS</div>
+    <h3 class="mb-4 text-center">BYLAWS OF CASTAWAYS FOOTBALL CLUB (THE "SOCIETY")</h3>
+    <div class="container">
+      <app-pdf-viewer
+        pdfUrl="s3://castways-resources/Bylaws of Castaways Football Club_2024_rev2.pdf"></app-pdf-viewer>
+    </div>
+  </div>
+</section>

@@ -22,13 +22,19 @@ export class SidebarComponent {
       title: `What's Happening`, path: '/events', icon: 'bi bi-newspaper'
     },
     {
-      title: 'Teams', path: '/teams', icon: 'bi bi-info-circle'
+      title: 'Teams', path: '/teams', icon: 'bi bi-people'
     },
     {
       title: 'Game Schedules', path: '/schedules/games', icon: 'bi bi-calendar-event'
     },
     {
       title: 'Practice Schedules', path: '/schedules/practices', icon: 'bi bi-calendar-week'
+    },
+    {
+      title: 'Merchandise', path: '/merchandise', icon: 'bi bi-cart'
+    },
+    {
+      title: 'Club Resources', path: '/resources', icon: 'bi bi-folder2-open'
     },
   ];
 

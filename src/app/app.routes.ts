@@ -25,4 +25,14 @@ export const routes: Routes = [
     pathMatch: 'full',
     loadComponent: () => import('./pages/teams/teams').then(m => m.TeamsComponent)
   },
+  {
+    path: 'merchandise',
+    pathMatch: 'full',
+    loadComponent: () => import('./pages/merchandise/merchandise').then(m => m.MerchandiseComponent)
+  },
+  {
+    path: 'bylaws',
+    pathMatch: 'full',
+    loadComponent: () => import('./pages/bylaws/bylaws').then(m => m.BylawsComponent)
+  },
 ];
