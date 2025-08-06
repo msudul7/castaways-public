@@ -25,10 +25,7 @@ export class SidebarComponent {
       title: 'Teams', path: '/teams', icon: 'bi bi-people'
     },
     {
-      title: 'Game Schedules', path: '/schedules/games', icon: 'bi bi-calendar-event'
-    },
-    {
-      title: 'Practice Schedules', path: '/schedules/practices', icon: 'bi bi-calendar-week'
+      title: 'Schedules', path: '/schedules', icon: 'bi bi-calendar-week'
     },
     {
       title: 'Merchandise', path: '/merchandise', icon: 'bi bi-cart'

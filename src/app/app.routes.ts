@@ -16,9 +16,19 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/about/about').then(m => m.AboutComponent)
   },
   {
+    path: 'events',
+    pathMatch: 'full',
+    loadComponent: () => import('./pages/events/events').then(m => m.EventsComponent)
+  },
+  {
     path: 'contact',
     pathMatch: 'full',
     loadComponent: () => import('./pages/contact/contact').then(m => m.ContactComponent)
+  },
+  {
+    path: 'schedules',
+    pathMatch: 'full',
+    loadComponent: () => import('./pages/schedules/schedules').then(m => m.Schedules)
   },
   {
     path: 'teams',
@@ -34,5 +44,15 @@ export const routes: Routes = [
     path: 'bylaws',
     pathMatch: 'full',
     loadComponent: () => import('./pages/bylaws/bylaws').then(m => m.BylawsComponent)
+  },
+  {
+    path: 'terms-of-service',
+    pathMatch: 'full',
+    loadComponent: () => import('./pages/terms-of-service/terms-of-service').then(m => m.TermsOfService)
+  },
+  {
+    path: 'privacy-policy',
+    pathMatch: 'full',
+    loadComponent: () => import('./pages/privacy-policy/privacy-policy').then(m => m.PrivacyPolicy)
   },
 ];

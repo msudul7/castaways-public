@@ -1,3 +1,32 @@
 <canvas id="pdf-canvas">
 
 </canvas>
+<section>
+  <div class="row d-flex align-items-center justify-content-center mt-3">
+    <div class="col-auto">
+      <button
+        class="btn btn-primary"
+        (click)="bumpPageNumber(-1)"
+        [disabled]="getCurrentPageNumber() <= 1"
+      >
+        &lt;</button>
+    </div>
+    <div class="col-auto">
+      <div class="d-flex justify-content-center align-items-center">
+        <span>Page</span>
+        <input
+          class="form-control page-number-input"
+          [formControl]="form?.controls?.pageNumber"
+        >
+        <span>of {{ getTotalPages() }}</span>
+      </div>
+    </div>
+    <div class="col-auto">
+      <button
+        class="btn btn-primary"
+        (click)="bumpPageNumber(1)"
+        [disabled]="getCurrentPageNumber() >= getTotalPages()"
+      >&gt;</button>
+    </div>
+  </div>
+</section>
