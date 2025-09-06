@@ -30,9 +30,9 @@ export class SidebarComponent {
     {
       title: 'Merchandise', path: '/merchandise', icon: 'bi bi-cart'
     },
-    {
-      title: 'Club Resources', path: '/resources', icon: 'bi bi-folder2-open'
-    },
+    // {
+    //   title: 'Club Resources', path: '/resources', icon: 'bi bi-folder2-open'
+    // },
   ];
 
   constructor(
