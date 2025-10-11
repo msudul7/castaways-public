@@ -1,9 +1,250 @@
+@import '../../styles.scss';
+
+// Site in Progress Banner
+.progress-banner {
+  background: linear-gradient(45deg, $info 0%, lighten($info, 10%) 100%) !important;
+  // Add a subtle bottom border gradient
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg,
+      $warning 0%,
+      $success 25%,
+      $warning 50%,
+      $success 75%,
+      $warning 100%) 1;
+  position: relative;
+  z-index: 1000;
+}
+
+small {
+  font-size: 0.75rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+.bi-tools {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+// Responsive text
+@media (max-width: 768px) {
+  small {
+    font-size: 0.7rem;
+  }
+}
+
+@keyframes wiggle {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-5deg);
+  }
+
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
 .site-header {
-  max-height: 200px;
+  height: $navbar-height;
   z-index: 900;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  overflow: hidden; // Prevent shimmer effect from causing page width growth
+
+  // Beautiful gradient background with pattern
+  background: linear-gradient(135deg,
+      $primary 0%,
+      $secondary 25%,
+      $primary 50%,
+      $secondary 75%,
+      $primary 100%);
+
+  // Add a subtle pattern overlay
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba($info, 0.1) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, rgba($success, 0.08) 1px, transparent 1px),
+      linear-gradient(45deg, transparent 30%, rgba($info, 0.05) 30%, rgba($info, 0.05) 32%, transparent 32%);
+    background-size: 30px 30px, 20px 20px, 40px 40px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  // Ensure content appears above the pattern
+  .container-fluid {
+    position: relative;
+    z-index: 2;
+  }
+
+  // Add a subtle animated shimmer effect
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba($info, 0.1),
+        transparent);
+    animation: shimmer 6s infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+
+  50% {
+    left: 100%;
+  }
+
+  100% {
+    left: 100%;
+  }
 }
 
 .logo {
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.site-title {
+  font-family: $font-family-title;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.05em;
+
+  h1 {
+    position: relative;
+    z-index: 3;
+    font-family: $font-family-title;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    // Add a subtle glow effect
+    filter: drop-shadow(0 0 8px rgba($info, 0.3));
+  }
+
+  h6 {
+    position: relative;
+    z-index: 3;
+    font-family: $font-family-title-alt;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    opacity: 0.95;
+  }
+}
+
+.navbar-brand {
+  min-width: 0; // Allow flexbox to shrink
+  flex: 1; // Take available space
+
+  h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+
+  h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+}
+
+// Ensure buttons don't wrap on small screens
+.container-fluid {
+  flex-wrap: nowrap !important;
+  min-width: 0;
+}
+
+// Enhanced button styling for the new navbar
+.btn-outline-light {
+  position: relative;
+  z-index: 3;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+
+  &:hover {
+    color: $info;
+    background-color: rgba($info, 0.2);
+    border-color: rgba($info, 0.5) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($info, 0.5);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 576px) {
+  .site-title {
+    h1.display-3 {
+      font-size: 1.6rem !important;
+      letter-spacing: 0.05em;
+    }
+
+    h6 {
+      font-size: 0.75rem !important;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  .logo {
+    height: 60px !important;
+  }
+
+  .bg-info.rounded-circle {
+    padding: 0.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-title {
+    h1.display-3 {
+      font-size: 2rem !important;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-title {
+    h1.display-3 {
+      font-size: 3.5rem !important;
+      letter-spacing: 0.1em;
+    }
+
+    h6 {
+      font-size: 1rem !important;
+    }
+  }
 }

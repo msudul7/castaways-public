@@ -9,7 +9,7 @@ export class SidebarService {
 
   constructor(
     protected router: Router
-  ) {}
+  ) { }
 
   toggle(): void {
     this._show.set(!this._show());
@@ -23,4 +23,8 @@ export class SidebarService {
     this._show.set(true);
   }
 
+  // Get screen size
+  getScreenSize() {
+    return window.innerWidth;
+  }
 }
