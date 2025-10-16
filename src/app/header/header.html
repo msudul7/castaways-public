@@ -1,8 +1,10 @@
 <header id="header">
+
+
   <nav class="navbar navbar-expand-lg bg-primary p-1 site-header">
-    <div class="container-fluid">
+    <div class="container-fluid d-flex align-items-center">
       <a
-        class="navbar-brand d-flex justify-content-between align-items-center"
+        class="navbar-brand d-flex align-items-center overflow-hidden me-3"
         href="/"
       >
         <div class="bg-info rounded-circle p-2 border border-3 border-light">
@@ -10,63 +12,87 @@
             src="/assets/images/castaways_web_logo.png"
             alt="Castaways Logo"
             height="80px"
-            class="logo "
+            class="logo"
           >
         </div>
-        <div class="col text-center">
-          <h1 class=" display-3 ms-4 site-title text-light mb-0">CASTAWAYS FC</h1>
-          <h6 class="text-info mt-0">Castaways Football Club, Victoria, BC</h6>
+        <div class="col-auto">
+          <div class="justify-content-start flex-grow-1 overflow-hidden ms-3">
+            <h1 class="display-3 site-title text-light mb-0 text-truncate">CASTAWAYS FC</h1>
+            <h6 class="text-info ms-4 site-title text-center mt-0 text-truncate d-none d-sm-block">Castaways Football Club,
+              Victoria,
+              BC</h6>
+          </div>
+        </div>
+        <div class="col">
         </div>
       </a>
-      <div class="btn-group">
-        <!-- Instagram -->
-        <a
-          href="https://www.instagram.com/castawaysfc/"
-          target="_blank"
-          noopener
-          noreferrer
-        >
-          <button
-            class="btn btn-outline-light border-0"
-            type="button"
+      <div class="d-flex align-items-center flex-shrink-0">
+        <div class="btn-group d-none d-md-flex me-2">
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/castawaysfc/"
+            target="_blank"
+            noopener
+            noreferrer
           >
-            <i class="bi bi-instagram fs-3"></i>
-          </button>
-        </a>
-        <!-- Contact Email -->
-        <a
-          href="mailto:"
-          target="_blank"
-          noopener
-          noreferrer
-        >
-          <button
-            class="btn btn-outline-light border-0"
-            type="button"
+            <button
+              class="btn btn-outline-light border-0"
+              type="button"
+            >
+              <i class="bi bi-instagram fs-1"></i>
+            </button>
+          </a>
+          <!-- Contact Email -->
+          <a
+            href="mailto:"
+            target="_blank"
+            noopener
+            noreferrer
           >
-            <i class="bi bi-envelope fs-3"></i>
-          </button>
-        </a>
-        <!-- GitHub -->
-        <a
-          href="https://github.com/cameronpettit/castaways-public"
-          target="_blank"
-          noopener
-          noreferrer
-        >
-          <button
-            class="btn btn-outline-light border-0"
-            type="button"
+            <button
+              class="btn btn-outline-light border-0"
+              type="button"
+            >
+              <i class="bi bi-envelope fs-1"></i>
+            </button>
+          </a>
+          <!-- GitHub -->
+          <a
+            href="https://github.com/cameronpettit/castaways-public"
+            target="_blank"
+            noopener
+            noreferrer
           >
-            <i class="bi bi-github fs-3"></i>
-          </button>
-        </a>
-      </div>
-      <div *ngIf="!sidebarService._show()" class="border-start border-2 ps-4">
-        <button class="btn btn-outline-light" (click)="sidebarService.toggle()">
-          <i class="bi bi-list"></i>
+            <button
+              class="btn btn-outline-light border-0"
+              type="button"
+            >
+              <i class="bi bi-github fs-1"></i>
+            </button>
+          </a>
+        </div>
+        <button
+          class="btn btn-outline-light border-0 border-start p-3"
+          (click)="sidebarService.toggle()"
+        >
+          <i class="bi bi-list fs-3"></i>
         </button>
       </div>
     </div>
   </nav>
+  <!-- Site in Progress Banner -->
+  <div class="progress-banner bg-info text-dark py-1 px-2 text-center">
+    <small class="fw-bold">
+      <i class="bi bi-tools me-1"></i>
+      SITE IN DEVELOPMENT - We're building a new website! Bear with us as we work to improve things around here. Got
+      feedback? <a
+        class="text-secondary"
+        href="mailto:webmaster@castawaysfc.org"
+        target="_blank"
+        noopener
+        noreferrer
+      >Let us know!</a>
+      <i class="bi bi-tools ms-1"></i>
+    </small>
+  </div>
 </header>

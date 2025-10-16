@@ -30,13 +30,19 @@ export class SidebarComponent {
     {
       title: 'Merchandise', path: '/merchandise', icon: 'bi bi-cart'
     },
-    // {
-    //   title: 'Club Resources', path: '/resources', icon: 'bi bi-folder2-open'
-    // },
+    {
+      title: 'Club Resources', path: '/resources', icon: 'bi bi-folder2-open'
+    },
   ];
 
   constructor(
     protected sidebarService: SidebarService
   ) { }
+
+  onLinkClick() {
+    if (window.innerWidth < 768) {
+      this.sidebarService.hide();
+    }
+  }
 
 }
